@@ -1,0 +1,9 @@
+{
+  "name": "index",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "inital": "cd client && npm ci",
+    "test": "cd clent && npm run test"
+  }
+}
