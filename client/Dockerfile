@@ -3,13 +3,15 @@ FROM node:14.14.0-alpine
 
 WORKDIR /app
 
-COPY ./package.json .
+COPY package.json .
 
-RUN yarn
+COPY package-lock.json .
+
+RUN npm ci
 
 COPY . .
 
-RUN yarn run build
+RUN npm run build
 
 # run nginx 
 FROM nginx:stable-alpine
