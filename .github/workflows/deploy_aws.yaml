@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: npm install
-        run: npm run init
+        run: npm run inital
       - name: npm test
         run: npm run test
 
@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: npm install
-        run: npm run init
+        run: npm run inital
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: build docker
